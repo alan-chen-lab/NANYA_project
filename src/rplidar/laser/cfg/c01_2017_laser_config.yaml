@@ -1,0 +1,6 @@
+min_ang: -1.92
+max_ang: 1.92
+
+#For urg_node / hokuyo_node
+angle_max: 1.92
+angle_min: -1.92

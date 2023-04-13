@@ -1,0 +1,12 @@
+float32 left_control_value
+float32 left_error_value
+float32 left_reference_speed_value
+float32 left_real_speed_value
+float32 left_output_PWM_value
+float32 left_brake_value
+float32 right_control_value
+float32 right_error_value
+float32 right_reference_speed_value
+float32 right_real_speed_value
+float32 right_output_PWM_value
+float32 right_brake_value

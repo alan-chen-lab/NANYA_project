@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: web_video_server
+Description: Description of web_video_server
+Version: 0.2.2
+Cflags: 
+Libs: -L/home/c01/naya_navigation/devel/lib 
+Requires: 

@@ -1,0 +1,7 @@
+bool get_led
+---
+uint8 red_led
+uint8 green_led
+uint8 blue_led
+bool left_dig_led
+bool right_dig_led

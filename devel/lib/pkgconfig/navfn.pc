@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: navfn
+Description: Description of navfn
+Version: 1.14.9
+Cflags: -I/home/c01/naya_navigation/devel/include -I/home/c01/naya_navigation/src/navigation-kinetic-devel/navfn/include
+Libs: -L/home/c01/naya_navigation/devel/lib -lnavfn
+Requires: geometry_msgs message_runtime nav_core nav_msgs pluginlib roscpp visualization_msgs

@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: BaseNode
+Description: Description of BaseNode
+Version: 0.0.0
+Cflags: -I/home/c01/naya_navigation/devel/include -I/home/c01/naya_navigation/src/BaseNode/include
+Libs: -L/home/c01/naya_navigation/devel/lib -lBaseNode
+Requires: roscpp std_msgs

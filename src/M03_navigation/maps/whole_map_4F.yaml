@@ -1,0 +1,7 @@
+image: /home/c01/naya_navigation/src/M03_navigation/maps/whole_map_4F.pgm
+resolution: 0.050000
+origin: [-20.000000, -55.200000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

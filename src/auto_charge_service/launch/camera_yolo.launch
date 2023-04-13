@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="camera_index" default="3" />
+
+  <node pkg="auto_charge_service" type="camera_yolo_pub" name="camera_yolo_pub" output="screen">
+    <param name="camera_index" type="int" value="$(arg camera_index)" />
+  </node>
+
+</launch> 

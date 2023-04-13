@@ -1,0 +1,2 @@
+string RFIDNo
+bool detect_status

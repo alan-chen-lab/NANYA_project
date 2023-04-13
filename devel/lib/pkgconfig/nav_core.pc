@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: nav_core
+Description: Description of nav_core
+Version: 1.14.9
+Cflags: -I/home/c01/naya_navigation/src/navigation-kinetic-devel/nav_core/include
+Libs: -L/home/c01/naya_navigation/devel/lib 
+Requires: std_msgs geometry_msgs tf costmap_2d

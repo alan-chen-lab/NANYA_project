@@ -1,0 +1,4 @@
+bool left_dig_led
+bool right_dig_led
+float32 left_run_time
+float32 right_run_time

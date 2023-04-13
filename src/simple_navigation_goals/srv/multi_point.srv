@@ -1,0 +1,5 @@
+float32[] x_goal
+float32[] y_goal
+float32[] theta_goal
+float32[] sec_goal
+---

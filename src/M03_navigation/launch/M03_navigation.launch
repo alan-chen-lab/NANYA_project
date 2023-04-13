@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- Arguments -->
+  
+  <arg name="map_file" default="$(find M03_navigation)maps/map_particle30.yaml"/>
+  
+  <!--node pkg="tf" type="static_transform_publisher" name="odom_to_base_link" args="0 0 0 0 0 0 odom base_link 100" /-->
+
+  <node name="tf_broadcaster" pkg="tf_broadcaster" type="tf_broadcaster" respawn="false"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find M03_navigation)/launch/amcl.launch"/>
+
+  <!-- move_base -->
+  <include file="$(find M03_navigation)/launch/move_base.launch"/>
+    
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" output="screen"/>
+
+</launch>

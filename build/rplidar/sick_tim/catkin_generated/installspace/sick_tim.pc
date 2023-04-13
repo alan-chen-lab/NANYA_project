@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/install
+
+Name: sick_tim
+Description: Description of sick_tim
+Version: 0.0.17
+Cflags: -I/home/c01/naya_navigation/install/include -I/usr/include -I/usr/include/libusb-1.0
+Libs: -L/home/c01/naya_navigation/install/lib -lsick_tim_3xx /usr/lib/x86_64-linux-gnu/libboost_system.so -lusb-1.0
+Requires: roscpp sensor_msgs diagnostic_updater dynamic_reconfigure

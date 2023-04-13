@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="robot_version" default="c01_2017"/>
+    <node ns="laser" name="base_laser" pkg="urg_node" type="urg_node" output="screen">
+        <!--param name="serial_port" type="string" value="/dev/ttyACM0"/-->
+        <param name="serial_port" type="string" value="/dev/ttyUSB-Hokuyo-UST-05LA"/>
+        <param name="serial_baud" type="int" value="115200"/>
+        <param name="frame_id" type="string" value="laser_link"/>
+        <param name="publish_intensity" type="bool" value="false"/>
+
+        <!--<param name="angle_min" type="double" value="-1.92" />
+        <param name="angle_max" type="double" value="1.92" />-->
+        <rosparam command="load" file="$(find laser)/cfg/$(arg robot_version)_laser_config.yaml" />
+    </node>
+
+    <include file="$(find laser)/launch/transform/$(arg robot_version)_transform.launch">
+    </include>
+</launch>

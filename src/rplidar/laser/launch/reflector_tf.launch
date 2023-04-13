@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="topic_name" default="scan_filter"/>
+    <arg name="node_rate" default="10"/>
+    <arg name="parent_link" default="laser_link"/>
+    <arg name="child_link" default="reflector"/>
+
+    <node pkg="laser" type="reflector_tf_node" name="reflector_tf_node" output="screen">
+        <param name="topic_name_" value="$(arg topic_name)"/>
+        <param name="node_rate_" value="$(arg node_rate)"/>
+        <param name="parent_link_" value="$(arg parent_link)"/>
+        <param name="child_link_" value="$(arg child_link)"/>
+    </node>
+</launch>

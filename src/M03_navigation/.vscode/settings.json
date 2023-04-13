@@ -1,0 +1,6 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/c01/naya_navigation/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ]
+}

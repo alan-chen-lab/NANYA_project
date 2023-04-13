@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="laser" type="scan_matcher_to_imu.py" name="laser_imu_converter" output="screen"/>
+    <include file="$(find laser)/launch/laser_scan_matcher.launch"/>
+</launch>

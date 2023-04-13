@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: amcl
+Description: Description of amcl
+Version: 1.14.9
+Cflags: -I/home/c01/naya_navigation/devel/include -I/home/c01/naya_navigation/src/navigation-kinetic-devel/amcl/include
+Libs: -L/home/c01/naya_navigation/devel/lib -lamcl_sensors -lamcl_map -lamcl_pf
+Requires: rosbag roscpp dynamic_reconfigure tf nav_msgs std_srvs

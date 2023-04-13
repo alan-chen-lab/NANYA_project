@@ -1,0 +1,4 @@
+string current_controller
+string current_action
+uint64 current_controller_priority
+uint64 current_action_priority

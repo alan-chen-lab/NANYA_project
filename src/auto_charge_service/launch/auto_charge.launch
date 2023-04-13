@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- camera -->
+  <include file="$(find auto_charge_service)/launch/camera.launch"/>
+
+  <arg name="battery_threshold_server" default="0.9" /><!--充到0.9-->
+
+  <!-- <arg name="percentage_threshold_client" default="1.0" /> -->
+
+  <node pkg="auto_charge_service" type="auto_charge_server" name="auto_charge_server" output="screen">
+    <param name="battery_threshold_server" type="double" value="$(arg battery_threshold_server)" />
+
+  </node>
+
+  <!-- <node pkg="auto_charge_service" type="auto_charge_client" name="auto_charge_client" output="screen">
+    <param name="percentage_threshold_client" type="double" value="$(arg percentage_threshold_client)" />
+
+  </node> -->
+
+</launch> 

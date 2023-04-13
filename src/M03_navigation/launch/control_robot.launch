@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- odom -->
+  <include file="$(find BaseNode)/launch/base_connect.launch"/>
+
+  <!-- joystick -->
+  <include file="$(find BaseNode)/launch/joy_control.launch"/>
+
+  <!-- rosbridge -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+    <arg name="port" value="9090"/>
+  </include>
+
+</launch>

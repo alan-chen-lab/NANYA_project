@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- robot pose -->
+  <!-- <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" respawn="false"  required="true"/>  -->
+
+  <!-- odom -->
+  <include file="$(find BaseNode)/launch/base_connect.launch"/>
+
+  <!-- joystick -->
+  <include file="$(find BaseNode)/launch/joy_control.launch"/>
+
+  <!-- laser -->
+  <include file="$(find laser)/launch/rplidar_s1_.launch"/>
+
+  <!-- rosbridge -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" > 
+    <arg name="port" value="9090"/>
+  </include>
+
+</launch>

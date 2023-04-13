@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_version" default="c01_2017"/>
+  <node ns="laser"  name="base_laser"  pkg="rplidar_ros"  type="rplidarNode" output="screen"  required="true">
+    <param name="serial_port"         type="string" value="/dev/ttyUSB-Rplidar-S1"/>  
+    <param name="serial_baudrate"     type="int"    value="256000"/>
+    <param name="frame_id"            type="string" value="laser_link"/>
+    <param name="inverted"            type="bool"   value="false"/>
+    <param name="angle_compensate"    type="bool"   value="true"/>
+
+    <!--add scan mode (Standard/DenseBoost)-->
+    <param name="scan_mode"           type="string" value="DenseBoost"/>
+
+    <remap from="scan" to="scan"/>
+  </node>
+
+  <!--set scanning angle-->
+
+  <node name="rplidar_filter" pkg="laser" type="rplidar_filter.py" output="screen"  required="true">
+    <rosparam command="load" file="$(find laser)/cfg/$(arg robot_version)_laser_config.yaml" />
+  </node>
+
+  <!--include file="$(find laser)/launch/transform/$(arg robot_version)_transform.launch">
+  </include-->
+  
+</launch>

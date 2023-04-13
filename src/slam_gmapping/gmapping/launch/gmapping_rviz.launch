@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <!-- odom -->
+    <!-- <include file="$(find BaseNode)/launch/base_connect.launch"/> -->
+
+    <!-- joystick -->
+    <!-- <include file="$(find BaseNode)/launch/joy_control.launch"/> -->
+
+    <!-- laser -->
+    <!-- <include file="$(find laser)/launch/rplidar_s1_.launch"/> -->
+
+    <!-- solve tf frequency (laser_link)-->
+    <!-- <arg name="use_sim_time" value="true"/> -->
+    
+    <!--tf-->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_base_link" args="0 0 0 0 0 0 odom base_link 100" /> -->
+
+    <node name="tf_broadcaster" pkg="tf_broadcaster" type="tf_broadcaster" respawn="false" required="true"/>
+    
+    <!-- gmapping-->
+    <arg name="scan_topic" default="/laser/scan"/>
+
+    <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen" required="true">
+        <remap from="scan" to="/laser/scan"/>
+
+        <param name="base_frame" value="base_link"/>
+        <param name="odom_frame" value="odom"/>
+        <param name="map_update_interval" value="0.1"/>
+
+        <param name="maxUrange" value="9.5"/>
+        <param name="maxRange" value="10.0"/>
+
+        <param name="sigma" value="0.05"/>
+        <param name="kernelSize" value="1"/>
+        <param name="lstep" value="0.05"/>
+        <param name="astep" value="0.05"/>
+        <param name="iterations" value="5"/>
+        <param name="lsigma" value="0.075"/>
+        <param name="ogain" value="3.0"/>
+        <param name="lskip" value="0"/>
+        <param name="minimumScore" value="0"/>
+
+        <param name="srr" value="0.1"/>
+        <param name="srt" value="0.2"/>
+        <param name="str" value="0.1"/>
+        <param name="stt" value="0.2"/>
+
+        <param name="linearUpdate" value="0.1"/>
+        <param name="angularUpdate" value="0.2"/>
+        <param name="temporalUpdate" value="-1.0"/>
+        <param name="resampleThreshold" value="0.5"/>
+
+        <param name="particles" value="50"/>
+        
+     	<!--map size-->
+        <param name="xmin" value="-20.0"/>
+        <param name="ymin" value="-20.0"/>
+        <param name="xmax" value="20.0"/>
+        <param name="ymax" value="20.0"/>
+        <param name="delta" value="0.05"/>
+
+        <param name="llsamplerange" value="0.01"/>
+        <param name="llsamplestep" value="0.01"/>
+        <param name="lasamplerange" value="0.005"/>
+        <param name="lasamplestep" value="0.005"/>
+        
+ </node>
+
+    <!--<rviz>-->
+    <node name="rviz" pkg="rviz" type="rviz" output="screen" required="true"/>
+    <!-- <node name="rviz" pkg="rviz" type="rviz" required="true"/> -->
+
+    <!-- robot pose -->
+    <!-- <node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" respawn="false"  required="true"/> -->
+             
+</launch>

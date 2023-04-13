@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="laser" name="scan_filter" type="scan_filter" output="screen">
+       <param name="max_intensity" value="250"/>
+       <param name="min_intensity" value="240"/>
+       <param name="continuous_points" value="15"/>
+       <param name="dr_error" value="10"/>
+    </node>
+</launch>

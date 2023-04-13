@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+ <node ns="laser" name="scan_detection" pkg="laser" type="scan_detection" >
+
+  <param name="max_d" value="0.35" />
+  <param name="max_f" value="0.30" />
+  <param name="continuous_points" value="5" />
+  <param name="theta" value="0.5236" />
+
+ </node>
+
+</launch>

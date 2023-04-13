@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: dwa_local_planner
+Description: Description of dwa_local_planner
+Version: 1.14.9
+Cflags: -I/home/c01/naya_navigation/devel/include -I/home/c01/naya_navigation/src/navigation-kinetic-devel/dwa_local_planner/include
+Libs: -L/home/c01/naya_navigation/devel/lib -ldwa_local_planner
+Requires: dynamic_reconfigure nav_msgs pluginlib roscpp

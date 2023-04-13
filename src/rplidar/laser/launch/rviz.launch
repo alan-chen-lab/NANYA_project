@@ -1,0 +1,3 @@
+<launch>
+    <node ns="log" pkg="rviz" type="rviz" name="display" args="-d $(find laser)/rviz/log.rviz" output="screen" />
+</launch>

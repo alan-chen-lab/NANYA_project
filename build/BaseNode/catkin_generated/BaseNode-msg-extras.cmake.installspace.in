@@ -1,0 +1,2 @@
+set(BaseNode_MESSAGE_FILES "msg/RealSpeedData.msg;msg/AutoDockStatus.msg;msg/CurrentController.msg;msg/FlagReport.msg;msg/FlagReportStamped.msg;msg/PIC32EmergencySetting.msg;msg/PingData.msg;msg/PingDataStamped.msg;msg/RGBLEDControl.msg;msg/RGBLEDControlStamped.msg;msg/SonicReport.msg;msg/RFIDReport.msg;msg/MagnetReport.msg;msg/DigitLEDControl.msg;msg/IMUReport.msg;msg/IrDockReport.msg")
+set(BaseNode_SERVICE_FILES "srv/LEDReport.srv;srv/SetObstacleDistance.srv;srv/GetObstacleDistance.srv")

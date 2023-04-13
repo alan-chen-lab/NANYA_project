@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.2455 0 0.065 0 0 3.14 base_link laser_link 100" respawn="false"/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/c01/naya_navigation/devel
+
+Name: map_msgs
+Description: Description of map_msgs
+Version: 1.14.1
+Cflags: -I/home/c01/naya_navigation/devel/include
+Libs: -L/home/c01/naya_navigation/devel/lib 
+Requires: message_runtime nav_msgs sensor_msgs std_msgs

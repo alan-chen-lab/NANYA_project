@@ -1,0 +1,10 @@
+<launch>
+    <param name="use_sim_time" value="true"/>
+
+<node pkg="rosbag" type="play" name="player" output="screen" args="--clock $(find g4_ndt)/logs/qr_localization/mapping.bag"/>
+
+    <include file="$(find laser)/launch/gmapping.launch"/>
+
+    <include file="$(find laser)/launch/rviz.launch"/>
+
+</launch>

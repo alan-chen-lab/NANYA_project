@@ -1,0 +1,5 @@
+int32 charge_status
+int32 charge_stat_1
+int32 charge_stat_2
+int32 charge_dock_up
+int32 dock_error_message

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="auto_charge_service" type="camera_back" name="camera_back" output="screen" required="true"></node>
+  <node pkg="auto_charge_service" type="camera_back_sub" name="camera_back_sub" output="screen" required="true"></node>
+  
+</launch> 
