@@ -4,6 +4,8 @@ Cooperative project
 檔案: [建置教學](https://docs.google.com/presentation/d/15nAo85tFaTnO_qqIzosdZcfENdTAr-pa/edit?usp=share_link&ouid=110465291790909207744&rtpof=true&sd=true)
 ## System Architecture
 
+![screen](/Pictures/系統架構.png)
+
 ## Control
 操作功能使用原廠商提供的程式，以下為開啟指令:
 
@@ -51,6 +53,8 @@ rosrun map_server map_saver -f "/home/c01/naya_navigation/src/M03_navigation/map
 ```
 
 範例地圖:
+
+![screen](/Pictures/Gmapping建立完的地圖.png)
 ## Navigation
 此導航功能已包跨:機器人定位功能、路徑規劃、以及避障機制。
 
@@ -63,3 +67,7 @@ roslaunch M03_navigation gmapping_nav_rviz.launch
 啟動後即可開始導航任務，首先必須將機器人之光達對準道路，再選擇導航目標點並調整到達的朝向，放開後機器人即會駛向目標點。
 
 影片: [Navigation example](https://drive.google.com/file/d/1CDLqKJnabxWYUly3Iqd83e97-wSehT6J/view?usp=share_link)
+
+導航片段:
+
+![screen](/Pictures/導航片段之解釋圖.JPG)
