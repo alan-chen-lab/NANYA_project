@@ -1,6 +1,9 @@
 # NANYA_project
 Cooperative project
 
+檔案: [建置教學](https://docs.google.com/presentation/d/15nAo85tFaTnO_qqIzosdZcfENdTAr-pa/edit?usp=share_link&ouid=110465291790909207744&rtpof=true&sd=true)
+## System Architecture
+
 ## Control
 操作功能使用原廠商提供的程式，以下為開啟指令:
 
@@ -37,6 +40,8 @@ roslaunch M03_navigation control_robot_and_laser.launch
 roslaunch gmapping gmapping_rviz.launch
 ```
 此時即可開始建圖~
+
+影片: [Build map example](https://drive.google.com/file/d/1klJ9AeptKDNhmi2V4zyhWVIo1VGQPnjq/view?usp=share_link)
 ## Save Map
 建好地圖好，需保存地圖，即可存放地圖至指定資料夾(/home/c01/naya_navigation/src/M03_navigation/maps)。
 
@@ -44,11 +49,17 @@ roslaunch gmapping gmapping_rviz.launch
 ```
 rosrun map_server map_saver -f "/home/c01/naya_navigation/src/M03_navigation/maps/your_map_name
 ```
+
+範例地圖:
 ## Navigation
 此導航功能已包跨:機器人定位功能、路徑規劃、以及避障機制。
+
+避障機制影片: [Obstacles avoidance](https://drive.google.com/drive/folders/1S5SeBRpqfYxGmyaXIqyiL8HHlteSaFnq?usp=share_link)
 
 一般而言需開啟底盤、光達、以及導航相關程式，已將以上程式整合為以下。
 ```
 roslaunch M03_navigation gmapping_nav_rviz.launch
 ```
 啟動後即可開始導航任務，首先必須將機器人之光達對準道路，再選擇導航目標點並調整到達的朝向，放開後機器人即會駛向目標點。
+
+影片: [Navigation example](https://drive.google.com/file/d/1CDLqKJnabxWYUly3Iqd83e97-wSehT6J/view?usp=share_link)
