@@ -4,7 +4,7 @@ Cooperative project
 檔案: [建置教學](https://docs.google.com/presentation/d/15nAo85tFaTnO_qqIzosdZcfENdTAr-pa/edit?usp=share_link&ouid=110465291790909207744&rtpof=true&sd=true)
 ## System Architecture
 
-<img src="/Pictures/系統架構.png" width = "550" height = "350" alt="system" align=center />
+<img src="/Pictures/系統架構.png" width = "650" height = "400" alt="system" align=center />
 
 ## Control
 操作功能使用原廠商提供的程式，以下為開啟指令:
