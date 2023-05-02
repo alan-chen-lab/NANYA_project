@@ -2,6 +2,8 @@
 Cooperative project
 
 檔案: [建置教學](https://docs.google.com/presentation/d/15nAo85tFaTnO_qqIzosdZcfENdTAr-pa/edit?usp=share_link&ouid=110465291790909207744&rtpof=true&sd=true)
+
+Video: [Demo](https://drive.google.com/drive/folders/1Ookh3zrVwqIYmsHKeRaQPvfVUjbtL1fF?usp=share_link)
 ## System Architecture
 
 <img src="/Pictures/系統架構.png" width = "650" height = "400" alt="system" align=center />
