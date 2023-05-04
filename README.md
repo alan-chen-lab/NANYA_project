@@ -23,7 +23,7 @@ roslaunch BaseNode joy_control.launch
 ```
 roslaunch M03_navigation control_robot.launch
 ```
-## Ladir
+## Control+Ladir
 光達功能使用原廠商提供的程式，以下為開啟指令:
 
 * 啟動光達:
